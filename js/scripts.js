@@ -1,30 +1,31 @@
-//Back end
-var leapYear = function(year) {
-  if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
-    return true;
-  } else {
-  return false;
+
+
+function pigLatin(userInput){
+  var processedUserInput = ("");
+  if ((userInput === "a") || (userInput === "e") ||(userInput === "i") || (userInput === "o") ||(userInput === "u")){
+    processedUserInput = (userInput + "way");
   }
-};
+  else if ((userInput !== "a") || (userInput !== "e") ||(userInput !== "i") || (userInput !== "o") ||(userInput !== "u")){
+    processedUserInput = ((userInput.substr(1,userInput.length)+userInput.substr(0,1)) + "ay");
+  }
 
+  console.log(processedUserInput)
 
+}
 
 
 
 //Front end
 $(document).ready(function() {
-  $("form#leap-year").submit(function(event) {
+  $("form#pig-latin").submit(function(event) {
     event.preventDefault();
-    var year = parseInt($("input#year").val());
-    var result = leapYear(year);
+    var userInput = $("input#input").val();
+    var result = pigLatin(userInput);
 
-    $(".year").text(year);
 
-        if (!result) {
-          $(".not").text("not");
-        } else {
-          $(".not").text("");
-        }
+    $(".output").text(result);
+
+
 
 
     $("#result").show();
