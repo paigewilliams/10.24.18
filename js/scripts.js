@@ -1,18 +1,30 @@
 
 
 function pigLatin(userInput){
-  var processedUserInput = ("");
-  if ((userInput.charAt(0) === "a") || (userInput.charAt(0) === "e") ||(userInput.charAt(0) === "i") || (userInput.charAt(0) === "o") ||(userInput.charAt(0) === "u")){
-    processedUserInput = (userInput + "way");
-  }
-  else if ((userInput !== "a") || (userInput !== "e") ||(userInput !== "i") || (userInput !== "o") ||(userInput !== "u")){
-    processedUserInput = ((userInput.substr(1,userInput.length)+userInput.substr(0,1)) + "ay");
-  }
+  var splitUserInput = userInput.split("")
+  console.log(splitUserInput)
 
-  console.log(processedUserInput)
 
+ for (var i = 0; i < splitUserInput.length; i++){
+ var processedUserInput = ("");
+   if ((splitUserInput[i].charAt(0) === "a") || (splitUserInput[i].charAt(0) === "e") ||(splitUserInput[i].charAt(0) === "i") || (splitUserInput[i].charAt(0) === "o") ||(splitUserInput[i].charAt(0) === "u")){
+     var joinedUserInput = splitUserInput.join('');
+     // debugger
+     processedUserInput = (joinedUserInput + "way");
+   }
+   else if ((splitUserInput !== "a") || (splitUserInput !== "e") ||(splitUserInput !== "i") || (splitUserInput !== "o") ||(splitUserInput !== "u")){
+     processedUserInput = ((splitUserInput.substr(1,splitUserInput.length)+splitUserInput.substr(0,1)) + "ay");
+
+
+   }
+
+   console.log(processedUserInput)
+
+ }
 }
 
+     // var joinedUserInput = processedUserInput.join('');
+// processedUserInput = (splitUserInput + "way");
 
 
 //Front end
@@ -21,7 +33,6 @@ $(document).ready(function() {
     event.preventDefault();
     var userInput = $("input#input").val();
     var result = pigLatin(userInput);
-
 
     $(".output").text(result);
 
