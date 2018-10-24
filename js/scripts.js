@@ -2,7 +2,7 @@
 
 function pigLatin(userInput){
   var processedUserInput = ("");
-  if ((userInput === "a") || (userInput === "e") ||(userInput === "i") || (userInput === "o") ||(userInput === "u")){
+  if ((userInput.charAt(0) === "a") || (userInput.charAt(0) === "e") ||(userInput.charAt(0) === "i") || (userInput.charAt(0) === "o") ||(userInput.charAt(0) === "u")){
     processedUserInput = (userInput + "way");
   }
   else if ((userInput !== "a") || (userInput !== "e") ||(userInput !== "i") || (userInput !== "o") ||(userInput !== "u")){
