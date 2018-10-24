@@ -1,8 +1,25 @@
+function isItAVowel(character){
+  var actualVowels = ["a", "e", "i", "o", "u", "y"]
+}
 
+function vowelIndex(array){
+  var vowels = [];
+  array.forEach(function(each){
+    // we want to take 'each' and check if its a vowel
+      // if it is a vowel, lets add it to our array
+  })
+
+}
 
 function pigLatin(userInput){
   var splitUserInput = userInput.split("")
   console.log(splitUserInput)
+
+
+
+
+
+
 
 
  for (var i = 0; i < splitUserInput.length; i++){
@@ -12,7 +29,9 @@ function pigLatin(userInput){
      // debugger
      processedUserInput = (joinedUserInput + "way");
    }
-   else if ((splitUserInput !== "a") || (splitUserInput !== "e") ||(splitUserInput !== "i") || (splitUserInput !== "o") ||(splitUserInput !== "u")){
+   else if ((splitUserInput[i] !== "a") || (splitUserInput[i] !== "e") ||(splitUserInput[i] !== "i") || (splitUserInput[i] !== "o") ||(splitUserInput[i] !== "u")){
+
+
      processedUserInput = ((splitUserInput.substr(1,splitUserInput.length)+splitUserInput.substr(0,1)) + "ay");
 
 
