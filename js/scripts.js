@@ -1,5 +1,10 @@
 function isItAVowel(character){
   var actualVowels = ["a", "e", "i", "o", "u", "y"]
+  actualVowels.forEach(function(each){
+    if character = each
+  })
+  //if it character is a vowel then true
+  //else it is not a vowel, thus false
 }
 
 function vowelIndex(array){
